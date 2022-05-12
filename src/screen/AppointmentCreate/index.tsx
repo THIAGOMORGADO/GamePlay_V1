@@ -19,6 +19,7 @@ import { GuildIcon } from '../../components/GuildIcon'
 import { SmallInput } from '../../components/SmallInput'
 import { TextArea } from '../../components/TextArea'
 import { Button } from '../../components/Button'
+import { ModalView } from '../../components/ModalView'
 
 /* Estilos */
 import { styles } from './styles'
@@ -32,7 +33,7 @@ export function AppointmentCreate() {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Header title="Agendar partida" />
         <Text
           style={[
@@ -105,6 +106,7 @@ export function AppointmentCreate() {
           </View>
         </View>
       </ScrollView>
+      <ModalView />
     </KeyboardAvoidingView>
   )
 }
