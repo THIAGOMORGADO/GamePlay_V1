@@ -2,9 +2,7 @@
 
 author @THIAGOMORGADO
 
-$$
- Aqui entra
-$$
+> Aqui vamos falar o que ja foi feito e implementado
 
 #### Comando do git
 
