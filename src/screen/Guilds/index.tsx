@@ -23,6 +23,12 @@ export function Guilds({handleGuildSelect} : Props) {
       name: 'Lendarios',
       icon: 'null',
       owner: true
+    },
+    {
+      id: '2',
+      name: 'Duelo 1 X 1',
+      icon: 'null',
+      owner: true
     }
   ]
   return (

@@ -89,7 +89,7 @@ export function AppointmentCreate() {
             <View>
               <Text style={styles.label}>Dia e mes</Text>
               <View style={styles.column}>
-                <SmallInput maxLength={2} />
+                <SmallInput maxLength={2}/>
                 <Text style={styles.divider}>/</Text>
                 <SmallInput maxLength={2} />
               </View>
