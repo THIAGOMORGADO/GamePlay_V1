@@ -1,9 +1,33 @@
-import React from 'react'
-import { View } from 'react-native'
+import React, { ReactNode } from 'react'
+import { View, Modal, ModalProps } from 'react-native'
 
 /* Estilos */
 import { styles } from './styles'
 
-export function ModalView() {
-  return <View style={styles.container}></View>
+/* Componentes */
+import { Background } from '../BackGround'
+
+/* type */
+type Props = ModalProps & {
+  children: ReactNode
+}
+
+export function ModalView({ children, ...rest }: Props) {
+  return(
+  <Modal 
+    transparent 
+    animationType="slide" 
+    {...rest}
+  >
+    <View style={styles.overlay}>
+      <View style={styles.container}>
+        <Background>
+          <View style={styles.bar} />
+          {children}
+        </Background>
+      </View>
+    </View>
+  </Modal>
+  )
+
 }
