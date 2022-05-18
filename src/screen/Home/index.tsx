@@ -30,6 +30,7 @@ export function Home() {
   }
 
   const appointments = [
+
     {
       id: '1',
       guild: {
@@ -52,9 +53,8 @@ export function Home() {
       category: '1',
       date: '22/05 as 17:31h',
       description: 'lorem ipsum dolor sit amet, consectetur'
-    }
+    },
   ]
-
   return (
     <Background>
       <View style={styles.container}>
@@ -68,20 +68,20 @@ export function Home() {
           setCategory={handleCategorySelect}
         />
 
-        <View style={styles.content}>
+     
           <ListHeader title="Partidas agendadas" subtitle="Total 6" />
 
-          <FlatList
+        <FlatList
             data={appointments}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               <Appointment data={item} onPress={handleAppointmentDetails} />
             )}
             ItemSeparatorComponent={() => <ListDivider />}
+            contentContainerStyle={{paddingBottom: 69}}
             style={styles.matches}
             showsHorizontalScrollIndicator={false}
           />
-        </View>
       </View>
     </Background>
   )
